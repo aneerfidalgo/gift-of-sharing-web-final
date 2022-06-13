@@ -1,4 +1,5 @@
 import ShelterList from "./components/ShelterList";
+import StoreList from "./components/StoreList";
 import NewStoreForm from "./components/NewStoreForm";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
@@ -11,9 +12,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Menu />} />
           <Route path="shelters" element={<ShelterList />} />
-          {/* <Route path="shelter/:id" element={<ShelterList />} /> */}
-          {/* <Route path="stores" element={<StoreList />} /> */}
+          <Route path="stores" element={<StoreList />} />
           <Route path="newstore" element={<NewStoreForm />} />
+          {/* <Route path="shelter/:id" element={<ShelterList />} /> */}
         </Routes>
       </BrowserRouter>
 
