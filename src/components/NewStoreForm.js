@@ -41,7 +41,7 @@ export default function NewStoreForm() {
   return (
     <>
       <h1>NewStoreForm</h1>
-      <form onSubmit={sendData}>
+      <form onSubmit={(e) => sendData(e)}>
         <label>
           Name:
           <input type="text" name="name" onChange={setFormObject} />

@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 
 export default function ShelterList() {
+  // Fetch all the stores
+  const [stores, setStores] = useState([]);
+  useEffect(() => {
+    fetch("https://gift-of-sharing-af.web.app/stores")
+      .then((res) => res.json())
+      .then((data) => setStores(data));
+  }, []);
+
   // Fetch all the shelters
   const [shelters, setShelters] = useState([]);
   useEffect(() => {
