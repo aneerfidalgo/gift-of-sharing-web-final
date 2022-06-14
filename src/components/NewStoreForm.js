@@ -41,7 +41,7 @@ export default function NewStoreForm() {
   return (
     <>
       <h1>NewStoreForm</h1>
-      <form onSubmit={(e) => sendData(e)}>
+      <form className="py-3" onSubmit={(e) => sendData(e)}>
         <label>
           Name:
           <input type="text" name="name" onChange={setFormObject} />
