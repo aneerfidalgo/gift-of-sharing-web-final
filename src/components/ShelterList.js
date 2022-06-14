@@ -11,16 +11,39 @@ export default function ShelterList() {
 
   return (
     <>
-      {shelters?.map((shelter, i) => {
-        return (
-          <div key={i}>
-            <h1>{shelter.name}</h1>
-            <p>{shelter.address}</p>
-            <p>{shelter.phone}</p>
-            <a href={shelter.website}>Donate Now</a>
-          </div>
-        );
-      })}
+      <div className="container">
+        <div className="row">
+          {shelters?.map((shelter, i) => {
+            return (
+              <div className="col-md-4">
+                <div className="card shadow-sm">
+                  <div className="card-body" key={i}>
+                    <h1 className="card-text">{shelter.name}</h1>
+                    <img
+                      style={{ width: "100%", height: "300px" }}
+                      src={shelter.image}
+                    ></img>
+                    <p className="card-text"> {shelter.address}</p>
+                    <p className="card-text">{shelter.phone}</p>
+                    <a href={shelter.website}>Donate Now</a>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </>
   );
 }
+
+// <div class="card-body">
+//   <p class="card-text"></p>
+//   <div class="d-flex justify-content-between align-items-center">
+//     <div class="btn-group">
+//       <button type="button" class="btn btn-sm btn-outline-secondary"></button>
+//       <button type="button" class="btn btn-sm btn-outline-secondary"></button>
+//     </div>
+//     <small class="text-muted">shelterlist</small>
+//   </div>
+// </div>;

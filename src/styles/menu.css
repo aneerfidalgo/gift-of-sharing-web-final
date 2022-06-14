@@ -15,3 +15,9 @@
     padding: 10px;
     text-decoration: none;
 }
+.btn .hero-padding {
+    background-color: red !important;
+}
+.store-layout-form {
+    background-color: black;
+}
