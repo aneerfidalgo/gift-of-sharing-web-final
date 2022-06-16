@@ -7,6 +7,7 @@
     padding: 20px;
     background-color: aquamarine;
     align-self: center;
+    
 }
 
 .link-text {
@@ -17,7 +18,23 @@
 }
 .btn .hero-padding {
     background-color: red !important;
+
 }
 .store-layout-form {
-    background-color: black;
+    padding-left: 50px;
+    background-color: whitesmoke;
+    color: brown;
+    
 }
+.store-list-header {
+    padding-left: 50px;
+}
+
+.footer{
+    margin-top: 2rem;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }

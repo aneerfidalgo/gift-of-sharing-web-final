@@ -1,7 +1,7 @@
-export default function Footer() {
-  return (
-    <footer>
-      <div>Aneer Fidalgo 2022</div>
-    </footer>
-  );
-}
+import React from "react";
+
+const Footer = () => (
+  <div className="footer">{/* <p>Aner Fidalgo 2022</p> */}</div>
+);
+
+export default Footer;

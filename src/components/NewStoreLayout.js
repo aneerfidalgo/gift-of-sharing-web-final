@@ -1,4 +1,4 @@
-export default function NewStoreForm() {
+export default function NewLayoutForm() {
   return (
     <form className="row g-3">
       <div className="col-md-6">

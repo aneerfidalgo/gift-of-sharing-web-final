@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../../src/styles/menu.css";
 
 export default function NewStoreForm() {
   const [formData, setFormData] = useState({});
@@ -41,36 +42,75 @@ export default function NewStoreForm() {
   return (
     <>
       <h1>NewStoreForm</h1>
-      <form onSubmit={(e) => sendData(e)}>
-        <label>
-          Name:
-          <input type="text" name="name" onChange={setFormObject} />
-        </label>
-        <label>
-          Address:
-          <input type="text" name="address" onChange={setFormObject} />
-        </label>
-        <label>
-          Description:
-          <input type="text" name="description" onChange={setFormObject} />
-        </label>
-        <label>
-          Food Details:
-          <input type="text" name="foodDetails" onChange={setFormObject} />
-        </label>
-        <label>
-          Schedule:
-          <input type="text" name="schedule" onChange={setFormObject} />
-        </label>
-        <label>
-          type
-          <select name="type">
-            <option value="grocery store">grocery store</option>
-            <option value="restaurant">restaurant</option>
-          </select>
-        </label>
-        <button>submit</button>
-      </form>
+      <div className="row">
+        <form className="store-layout-form" onSubmit={(e) => sendData(e)}>
+          <div className="col-md-12">
+            <label for="inputEmail4" className="form-label">
+              Name:
+              <input
+                type="text"
+                name="name"
+                onChange={setFormObject}
+                className="form-control"
+              />
+            </label>
+          </div>
+          <div className="col-md-12">
+            <label className="form-label">
+              Address:
+              <input
+                type="text"
+                name="address"
+                onChange={setFormObject}
+                className="form-control"
+              />
+            </label>
+          </div>
+          <div className="col-md-12">
+            <label className="form-label">
+              Description:
+              <input
+                type="text"
+                name="description"
+                onChange={setFormObject}
+                className="form-control"
+              />
+            </label>
+          </div>
+          <div className="col-md-12">
+            <label className="form-label">
+              Food Details:
+              <input
+                type="text"
+                name="foodDetails"
+                onChange={setFormObject}
+                className="form-control"
+              />
+            </label>
+          </div>
+          <div className="col-md-12">
+            <label className="form-label">
+              Schedule:
+              <input
+                type="text"
+                name="schedule"
+                onChange={setFormObject}
+                className="form-control"
+              />
+            </label>
+          </div>
+          <div className="col-md-12">
+            <label className="form-label">
+              type
+              <select name="type">
+                <option value="grocery store">grocery store</option>
+                <option value="restaurant">restaurant</option>
+              </select>
+            </label>
+          </div>
+          <button>submit</button>
+        </form>
+      </div>
     </>
   );
 }

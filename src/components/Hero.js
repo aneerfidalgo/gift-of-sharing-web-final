@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import "../styles/hero.css";
+
 export default function Hero() {
   return (
     <section class="py-5 text-center container">
@@ -10,7 +13,9 @@ export default function Hero() {
       </div>
       <div class="col-6 mx-auto">
         <button class="btn btn-danger" type="button">
-          Stop waisting food Today!
+          <Link to="/shelters" className="btn-text">
+            Stop wasting food Today!
+          </Link>
         </button>
       </div>
     </section>

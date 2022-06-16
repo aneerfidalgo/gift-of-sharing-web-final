@@ -16,6 +16,7 @@ export default function App() {
           <Route path="shelters" element={<ShelterList />} />
           <Route path="stores" element={<StoreList />} />
           <Route path="newstore" element={<NewStoreForm />} />
+
           {/* <Route path="shelter/:id" element={<ShelterList />} /> */}
         </Routes>
       </BrowserRouter>
