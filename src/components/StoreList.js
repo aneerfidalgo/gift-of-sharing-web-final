@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { ButtonToolbar } from "react-bootstrap";
+import Menu from "./Menu";
+import "../styles/storelist.css";
 
 export default function StoreList() {
   // Fetch all the stores
@@ -12,6 +14,7 @@ export default function StoreList() {
 
   return (
     <>
+      <Menu />
       <h1>Stores Collection</h1>
       {/* <div className="dropdown" />
       <button

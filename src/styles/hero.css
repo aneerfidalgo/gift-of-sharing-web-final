@@ -1,16 +1,26 @@
 .py-5 {
     margin-top: 160px !important;
+    
+
+    
+  
 }
 
 .col-6 {
 
 }
 
-.btn {
-    background-color: red;
-}
-
 .btn-text {
     color: whitesmoke;
     text-decoration: none;
+    font-family: 'Cormorant Garamond', serif;;
+}
+.col-md-4 {
+    margin-bottom: 50px;
+}
+
+.p {
+  
+ 
+      
 }

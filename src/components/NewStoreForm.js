@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
+import Footer from "./Footer";
 import "../../src/styles/menu.css";
+import Menu from "./Menu";
+import { useNavigate } from "react-router-dom";
+import "../styles/newstoreform.css";
 
 export default function NewStoreForm() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({});
   const [validForm, setValidForm] = useState(false);
 
@@ -27,9 +33,10 @@ export default function NewStoreForm() {
       },
       body: JSON.stringify(formData),
     })
-      .then((response) => response.json())
+      .then((response) => response.text())
       .then((data) => {
-        setFormData("Success:", data);
+        // setFormData("Success:", data);
+        navigate("/");
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -41,8 +48,9 @@ export default function NewStoreForm() {
 
   return (
     <>
-      <h1>NewStoreForm</h1>
+      <Menu />
       <div className="row">
+        <h1 className="form-title">NewStoreForm</h1>
         <form className="store-layout-form" onSubmit={(e) => sendData(e)}>
           <div className="col-md-12">
             <label for="inputEmail4" className="form-label">
@@ -111,6 +119,7 @@ export default function NewStoreForm() {
           <button>submit</button>
         </form>
       </div>
+      {/* <Footer /> */}
     </>
   );
 }

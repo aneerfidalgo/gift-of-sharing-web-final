@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import Footer from "./Footer";
+import Menu from "./Menu";
+import "../styles/shelterList.css";
 
 export default function ShelterList() {
   // Fetch all the shelters
@@ -11,6 +14,7 @@ export default function ShelterList() {
 
   return (
     <>
+      <Menu />
       <div className="container">
         <div className="row">
           {shelters?.map((shelter, i) => {
@@ -18,7 +22,7 @@ export default function ShelterList() {
               <div className="col-md-4">
                 <div className="card shadow-sm">
                   <div className="card-body" key={i}>
-                    <h1 className="card-text">{shelter.name}</h1>
+                    <h1 className="header-text">{shelter.name}</h1>
                     <img
                       style={{ width: "100%", height: "300px" }}
                       src={shelter.image}
@@ -33,6 +37,7 @@ export default function ShelterList() {
           })}
         </div>
       </div>
+      {/* <Footer /> */}
     </>
   );
 }

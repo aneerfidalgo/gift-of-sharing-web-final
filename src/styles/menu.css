@@ -11,30 +11,48 @@
 }
 
 .link-text {
-    color: black;
+    color: white;
     font-size: 1em;
     padding: 10px;
     text-decoration: none;
 }
+.button-text{
+    color: lightblue
+}
+
+.btn-info {
+    background-color: lightblue;
+    margin-left: 25px;
+}
+
+
 .btn .hero-padding {
-    background-color: red !important;
+    background-color: black;
+    
 
 }
 .store-layout-form {
-    padding-left: 50px;
-    background-color: whitesmoke;
+   background-color: whitesmoke;
     color: brown;
+   
+    
     
 }
 .store-list-header {
     padding-left: 50px;
 }
 
-.footer{
-    margin-top: 2rem;
+.footer-name{
+    margin-top: 1rem;
     padding: 1rem;
-    position: fixed;
+    position: absolute;
+    text-align: center;
+    background-color: black;
+    color: azure;
+    top: 90%;
     bottom: 0;
     left: 0;
     width: 100%;
   }
+  
+ 

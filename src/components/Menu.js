@@ -1,8 +1,10 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../styles/menu.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Menu() {
+  const navigate = useNavigate();
   return (
     <div class="container py-3">
       <header>
@@ -15,14 +17,35 @@ export default function Menu() {
           </a>
 
           <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-            <Link to="/stores" className="link-text">
-              List of the participating stores
+            <Link className="link-text" to="/">
+              Home
             </Link>
-            <Link to="/shelters" className="link-text">
-              Homeless Shelters
+            <Link to="/stores" className="button-text">
+              <button
+                onClick={() => navigate("/stores")}
+                type="button"
+                class="btn btn-info"
+              >
+                List of the participating stores
+              </button>
             </Link>
-            <Link to="/newstore" className="link-text">
-              Your Store Page
+            <Link to="/shelters" className="button-text">
+              <button
+                onClick={() => navigate("/shelters")}
+                type="button"
+                class="btn btn-info"
+              >
+                Homeless Shelters
+              </button>
+            </Link>
+            <Link to="/newstore" className="button-text">
+              <button
+                onClick={() => navigate("/newstore")}
+                type="button"
+                class="btn btn-info"
+              >
+                Your Store Page
+              </button>
             </Link>
           </nav>
         </div>
